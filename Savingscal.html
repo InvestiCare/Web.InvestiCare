@@ -5,31 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Savings Calculator</title>
     <link rel="stylesheet" href="stylesavings.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="webname">
-            <img  id="logo" src="InvestiCare logo.png" alt="InvestiCare logo"> 
-            <p>InvestiCare</p>
-        </div>
-        <div class="navlinks">
-            <p>Investment Guide</p>
-            <p>Investment Calculator</p>
-            <p>Asset Class Overview</p>
-            <p>Saving Planner</p>
-        </div>
-    </nav>
-      
-    <div class="Calculator">
-        <h2 class="Calculatoratitle">Savings calculator(50 30 20 rule)</h2>
-        <div class="CalculatorFunction1">
-        <label class="MonthlyIncome">Monthly Income(₹):</label>
-        <input type="number" class="InputBox" placeholder="Enter Monthly Income">
+
+
+
+    <div class="container">
+        
+        <div class="calculator">
+            <h1>Savings Calculator</h1>
+            
+            <label>Monthly Income (₹):</label>
+            <input type="number" id="monthly-income" placeholder="Enter income">
+
+            <label>Calculation Period (Years):</label>
+            <input type="number" id="calculation-period" placeholder="Enter years">
+
+            <button id="calculate-btn">Calculate</button>
+            
+            <div class="results">
+                <p id="total-income">Total Income: ₹0</p>
+                <p id="needs">Needs (50%): ₹0</p>
+                <p id="wants">Wants (30%): ₹0</p>
+                <p id="savings">Savings & Investments (20%): ₹0</p>
+            </div>
         </div>
 
-        <div class = "ClaculationFunction2">
-            <label class="">
+        <div class="instructions-container">
+            <h2>How to Use the Savings Calculator?</h2>
+            
+            <ul>
+                <li><b>Enter Monthly Income:</b> Your monthly salary or earnings.</li>
+                <li><b>Enter Calculation Period:</b> The number of years you want to calculate savings for.</li>
+                <li><b>Click 'Calculate':</b> Computes income distribution based on the 50-30-20 rule.</li>
+                <li><b>View Pie Chart:</b> Shows how income is split into needs, wants, and savings.</li>
+            </ul>
+            
+            <div class="chart-container">
+                <canvas id="savingsChart"></canvas>
+            </div>
         </div>
     </div>
+
+    <script src="script1.js"></script>
+
 </body>
 </html>
