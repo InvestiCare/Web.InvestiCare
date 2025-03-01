@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,11 +11,69 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     min-height: 100vh;
-    padding: 20px;
+    width: 100%;
 }
 
+/* Main Wrapper */
+.main-content {
+    flex: 1; /* Pushes the footer down */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #00246B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Website Name & Logo */
+.webname {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.webname img {
+    height: 40px;
+    width: auto;
+    border-radius: 5px;
+}
+
+/* Navigation Links */
+.navlinks {
+    display: flex;
+    gap: 30px;
+}
+
+.navlinks p {
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.navlinks p:hover {
+    color: #FFD700;
+}
+
+/* Contact Container */
 .contact-container {
     background: white;
     padding: 20px;
@@ -23,6 +82,8 @@ body {
     max-width: 400px;
     width: 100%;
     text-align: center;
+    margin-top: 110px; /* Ensures space below navbar */
+    margin-bottom: 20px; /* Reduce space before footer */
 }
 
 h1 {
@@ -49,4 +110,149 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #00246B;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+/* Website Name & Description */
+.webpagename {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.logoname {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#logoimg {
+    height: 40px;
+    width: auto;
+    border-radius: 5px;
+}
+
+#websitename {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.descript .shead {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.descript .webtext {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Navigation Links */
+.navigationlink {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigationpart1, .navigationpart2 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.navigationlink p {
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.navigationlink p:hover {
+    color: #FFD700;
+}
+
+/* Social Media & Disclaimer */
+.follow {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.followpart1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.followus p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    font-size: 22px;
+}
+
+.icons i {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.icons i:hover {
+    color: #FFD700;
+}
+
+/* Disclaimer */
+.followpart2 {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#disclaim {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        align-items: center;
+    }
+
+    .webpagename, .navigationlink, .follow {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .navigationlink {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navigationpart1, .navigationpart2 {
+        align-items: center;
+    }
+
+    .icons {
+        justify-content: center;
+    }
 }
