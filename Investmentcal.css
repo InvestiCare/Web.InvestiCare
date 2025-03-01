@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,31 +7,29 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: black;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    min-height: 100vh; /* Ensures footer stays at the bottom */
+    background-color: black;
+    margin: 0;
 }
 
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 65px;  /* Fixed height for consistency */
+    height: 65px; 
     background-color: #00246B;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;  /* Responsive padding */
-    font-weight: 300;
+    padding: 0 20px;  
     color: white;
-    z-index: 1000; /* Ensures navbar stays above other elements */
+    z-index: 1000;
 }
+
 .webname {
     font-size: 35px;
     display: flex;
@@ -39,10 +38,8 @@ body {
 
 .webname p {
     margin-left: 10px;
-    padding-top: 0; /* Fix text alignment */
 }
 
-/* Logo size */
 #logo {
     width: 50px;
     height: auto;
@@ -54,20 +51,24 @@ body {
     gap: 26px;
     font-size: 18px;
 }
+
+/* Main Content */
 .container {
+    flex-grow: 1; /* Ensures footer stays at the bottom */
+    width: 100%;
+    max-width: 1000px;
+    background: #E1DCD0;
+    padding: 20px;
+    margin: 80px auto 20px; /* Added margin-bottom to push footer down */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    max-width: 1000px;
-    width: 100%;
-    background: #E1DCD0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    flex-grow: 1; 
-    max-height: 480px;
+    min-height: 600px; /* Ensures enough space between container and footer */
 }
 
+/* Calculator Section */
 .calculator {
     width: 35%;
     display: flex;
@@ -108,6 +109,7 @@ button:hover {
     font-size: 18px;
 }
 
+/* Instructions Section */
 .instructions-container {
     width: 55%;
     padding: 20px;
@@ -124,6 +126,7 @@ button:hover {
     font-size: 16px;
 }
 
+/* Chart Container */
 .chart-container {
     width: 100%;
     height: 300px;
@@ -135,14 +138,167 @@ canvas {
     height: 300px;
 }
 
+/* Footer */
+footer {
+    width: 100%; /* Ensures full width */
+    background-color: #00246B;
+    color: white;
+    padding: 40px 0; /* Adjusted to remove gaps */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: auto; /* Ensures footer stays at the bottom */
+}
 
-@media (max-width: 768px) {
+/* Website Name & Description */
+.webpagename {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.logoname {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#logoimg {
+    height: 40px;
+    width: auto;
+    border-radius: 5px;
+}
+
+#websitename {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.descript .shead {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.descript .webtext {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Navigation Links */
+.navigationlink {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigationpart1, .navigationpart2 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.navigationlink p {
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.navigationlink p:hover {
+    color: #FFD700;
+}
+
+/* Social Media & Disclaimer */
+.follow {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 20px;
+}
+
+.followpart1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.followus p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    font-size: 22px;
+}
+
+.icons i {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.icons i:hover {
+    color: #FFD700;
+}
+
+/* Disclaimer */
+.followpart2 {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#disclaim {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Navbar */
+    .navlinks {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Container */
     .container {
         flex-direction: column;
         align-items: center;
+        min-height: auto; /* Allows dynamic height */
     }
 
     .calculator, .instructions-container {
         width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        align-items: center;
+    }
+
+    .webpagename, .navigationlink, .follow {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .navigationlink {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navigationpart1, .navigationpart2 {
+        align-items: center;
+    }
+
+    .icons {
+        justify-content: center;
     }
 }
