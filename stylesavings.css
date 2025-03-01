@@ -6,43 +6,107 @@
 }
 
 body {
-    background-color: #000;
-    color: white;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-.navbar{
-
+.navbar {
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
     width: 100%;
-    height: 65px;
+    height: 8%;
     background-color: #00246B;
     font-weight: 300;
     color: white;
 }
 
-.webname{
-    font-size: 40px;
+.container {
     display: flex;
-}
-
-.webname p{
-    padding-top: 3px;
-}
-
-#logo{
-    width: 60px;
-    height: auto;
-}
-
-.navlinks{
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding-right: 35px;
-    gap: 26px;
-    font-size: 20px;
+    align-items: flex-start;
+    max-width: 1000px;
+    width: 100%;
+    background: #E1DCD0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    margin-top: 80px;
 }
-        
+
+.calculator {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h1 {
+    color: #00246B;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    background-color: #00246B;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.results {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.instructions-container {
+    width: 50%;
+    padding: 20px;
+}
+
+.instructions-container h2 {
+    color: #00246B;
+    margin-bottom: 20px;
+}
+
+.instructions-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.chart-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+canvas {
+    width: 100%;
+    height: 300px;
+}
