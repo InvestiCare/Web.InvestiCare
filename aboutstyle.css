@@ -42,7 +42,6 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 35px;
     gap: 26px;
     font-size: 18px;
 }
@@ -93,7 +92,7 @@ html, body{
 
 .storyimage img{
     padding-top: 18px;
-    padding-right: 70px;
+    padding-right: 40px;
     width: 410px;
     height: 500px;
 }
@@ -125,3 +124,34 @@ span{
     font-size: 18px;
     font-weight: 500;
 }
+
+.MisVis{
+    padding: 35px 150px;;
+    background-color: #E1DCD0;
+}
+
+#misvishead{
+    font-size: 35px;
+    color: #00246B;
+    padding-bottom: 30px;
+}
+
+.misvissubhead{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.misvispart{
+    padding-top: 10px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 500;   
+}
+
+.list{
+    padding-left: 25px;
+    line-height: 35px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
