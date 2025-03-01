@@ -8,45 +8,52 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="webname">
-            <img  id="logo" src="InvestiCare logo.png" alt="InvestiCare logo"> 
-            <p>InvestiCare</p>
-        </div>
-        <div class="navlinks">
-            <p>Investment Guide</p>
-            <p>Investment Calculator</p>
-            <p>Asset Class Overview</p>
-            <p>Saving Planner</p>
-        </div>
-    </nav>
+
     
+
+    <!-- Main Content -->
     <div class="container">
-        <h1>SIP Investment Calculator</h1>
         
         <div class="calculator">
+            <h1>Investment Calculator</h1>
+            
             <label>Monthly Investment (₹):</label>
             <input type="number" id="monthly-investment" placeholder="Enter amount">
             
             <label>Annual Return Rate (%):</label>
             <input type="number" id="annual-return" placeholder="Enter return rate">
             
-            <label>Investment Period (Years):</label>
+            <label>Investment Time (Years):</label>
             <input type="number" id="investment-time" placeholder="Enter years">
             
             <button id="calculate-btn">Calculate</button>
+            
+            <div class="results">
+                <p id="total-invested">Total Invested: ₹0</p>
+                <p id="total-return">Return Amount: ₹0</p>
+                <p id="return-amount">Future Value: ₹0</p>
+            </div>
         </div>
 
-        <div class="results">
-            <p id="total-invested">Total Invested: ₹0</p>
-            <p id="total-return">Return Amount: ₹0</p>
-            <p id="return-amount">Future Value: ₹0</p>
-        </div>
-
-        <div class="chart-container">
-            <canvas id="sipChart"></canvas>
+        <div class="instructions-container">
+            <h2>How to Use the Investment Calculator?</h2>
+            
+            <ul>
+                <li><b>Enter Monthly Investment:</b> Amount you invest every month.</li>
+                <li><b>Enter Annual Return Rate:</b> Expected return percentage per year.</li>
+                <li><b>Enter Investment Period:</b> Duration in years.</li>
+                <li><b>Click 'Calculate':</b> Computes the total value of investment.</li>
+                <li><b>View Results:</b> Displays total invested, return amount, and future value.</li>
+                <li><b>Check Graph:</b> Line chart shows investment growth over time.</li>
+            </ul>
+            
+            <div class="chart-container">
+                <canvas id="sipChart"></canvas>
+            </div>
         </div>
     </div>
+
+
 
     <script src="script.js"></script>
 
