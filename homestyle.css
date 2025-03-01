@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.navbar{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-right: 150px;
+    width: 100%;
+    height: 8%;
+    background-color: #00246B;
+    font-weight: 300;
+    color: white;
+}
+
+.webname{
+    font-size: 35px;
+    display: flex;
+}
+
+.webname p{
+    padding-top: 6px;
+}
+
+#logo{
+    width: 60px;
+    height: auto;
+}
+
+.navlinks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 35px;
+    gap: 26px;
+    font-size: 20px;
+}
+body{
+    background-color: #E1DCD0;
+}
+.hero{
+    padding-left: 150px;
+    text-align: left;
+    color: #00246B;
+    padding-top: 90px;
+    font-size: 55px;
+    font-weight: 700;
+}
+.subheading1{
+    padding-top: 45px;
+    padding-left: 150px;
+    padding-right: 150px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 35px;
+}
+span{
+    color: #00246B;
+}
+#homeimage{
+    width: 280px;
+    height: 330px;
+    padding-top: 30px;
+    /* border-radius: 20px; */
+}
+
+.heropart{
+    padding-right: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.my-button{
+    background-color: #00246B;
+    color: #E1DCD0;
+    text-align: center;
+    display:inline-block;
+    font-size: 30px;
+    margin-left: 150px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+.my-button:hover{
+    background-color: black;
+    color: white;
+}
