@@ -164,9 +164,9 @@ html, body{
     line-height: 25px;
 }
 .text6{
-    color: #E1DCD0;
+    color: rgb(0, 0, 0);
     font-size: 18px;
-    font-weight: 100;
+    font-weight: 250;
     line-height: 25px;
 }
 #a2{
@@ -304,4 +304,28 @@ footer{
 
 #text1{
     font-size: 13px
+}
+.text7{
+    padding-left: 10px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+}
+.div5{
+    background-color: #E1DCD0;
+    padding-left: 200px;
+}
+.content{
+    padding-top: 50px;
+    gap: 100px;
+    background-color: #E1DCD0;
+    padding-bottom: 10px;
+}
+.text8{
+    padding-left: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 250;
+    line-height: 25px;
 }
